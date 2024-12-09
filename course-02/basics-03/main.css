@@ -1,0 +1,35 @@
+#product-overview {
+  background: #ff1b68;
+}
+
+.section-title {
+  color: #2ddf5c;
+}
+
+h1 {
+  color: white;
+  font-family: 'Anton', sans-serif;
+}
+
+h1 {
+  font-family: sans-serif;
+}
+
+/* 属性选择器 */
+/* e.g., 所有具有disabled属性的元素 */
+[disabled] {
+  color: #fff;
+}
+
+/* 
+  Cascading Style Sheets & Specificity
+  Cascading
+  Multiple Rules can apply to the same Element
+  
+  Specificity
+  Resolve conflicts arising from multiple Rules
+  Inline Styles
+  #ID selectors
+  .class, :pseudo-class and [attribute] selectors
+  <Tag> and ::pseudo-element selectors
+ */

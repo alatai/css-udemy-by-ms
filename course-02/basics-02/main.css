@@ -1,0 +1,14 @@
+section {
+  background: #ff1b68;
+}
+
+h1 {
+  color: #fff;
+  /* sans-serif：浏览器中的默认设置，表示无衬线 */
+  /* 衬线（Serif）是指字体设计中笔画末端的小装饰线或延伸部分 */
+  /* font-family: sans-serif; */
+  /* font-family: monospace; */
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
