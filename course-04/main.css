@@ -1,0 +1,59 @@
+body {
+  font-family: sans-serif;
+}
+
+nav {
+  margin-bottom: 16px;
+  background: #fa923f;
+  padding: 8px 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+}
+
+/* 特别的组合规则，应用于当前a标签的active类，也可以和ID结合 */
+a.active {
+  color: #521751;
+}
+
+a:not(.active) {
+  color: #0000ff;
+}
+
+.main-section {
+  height: 800px;
+  border: 1px solid #ccc !important; 
+  padding: 16px;
+}
+
+/* 位于main-section之前将不起作用 */
+.highlighted {
+  height: 200px;
+  border: 2px solid #fa923f;
+}
+
+/* 
+  CSS Class Selector vs ID Selector
+  CSS Class Selector
+  * Re-usable
+  * Allow you to "mark" and name things for styling purposes only
+  * Most-used selector type
+
+  CSS ID Selector
+  * Only used once per page
+  * Also got non-CSS meaning (e.g. on-page-link)
+  * Use if available anyways
+
+  !important
+  Overwrites specificity and all other selectors
+  In general: Don't use !important
+  Use specificity and rules to style you website according to
+  your needs (and to write better CSS code in the end...) 
+
+  :not() pseudo class
+  e.g., :not(p) { color: blue }
+  它允许我们基本上颠倒某个规则或排除某个选择器
+ */

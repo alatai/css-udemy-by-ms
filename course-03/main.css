@@ -1,0 +1,136 @@
+/* 如果想要重置所有元素，使其具有某种行为 */
+/* 比如使用框大小边框，就可以使用通用选择器 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  /* 默认情况下，所有元素都有一种特定的计算宽度和高度的方式，成为内容框 */
+  /* 可以通过将box-sizing属性添加到我们想要更改的元素来设置这种行为 */
+  /* margin永远不会包括在内 */
+  /* 对块级元素没有起作用所以需要使用通用选择器 */
+  /* box-sizing: border-box; */
+}
+
+#product-overview {
+  width: 100%;
+  height: 528px;
+  /* margin: 10px; */
+  padding: 10px;
+  /* border: 5px #000 solid; */
+  background: url('./freedom.jpg');
+}
+
+.section-title {
+  color: #2ddf5c;
+}
+
+#product-overview h1 {
+  color: white;
+  font-family: 'Anton', sans-serif;
+}
+
+/* h1 {
+    font-family: sans-serif;
+} */
+
+.main-header {
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #2ddf5c;
+}
+
+.main-header > div {
+  display: inline-block;
+  /* 解决垂直对齐居中问题 */
+  vertical-align: middle;
+}
+
+.main-header__brand {
+  color: #0e4f1f;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.main-nav {
+  display: inline-block;
+  /* 使用calc函数 */
+  /* 因为div和nav元素中间虽然没有内容，但是浏览器会认为有一个空白字符 */
+  /* 减去的大小可以设置为稍大于真实数据 */
+  width: calc(100% - 74px);
+  text-align: right;
+  /* 解决垂直对齐居中问题，默认是与同行最下端对齐 */
+  vertical-align: middle;
+}
+
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  /* 混合了inline和block元素的行为 */
+  /* 现在这些元素可以彼此相邻，但当涉及到设置顶部和底部边距、填充时... */
+  /* 它们仍然表现得像块级元素 */
+  display: inline-block;
+  margin: 0 16px;
+  /* 对于a标签不起作用，因为它会被覆盖 */
+  /* 即使是浏览器默认值也具有最低的优先级，即使它们直接针对元素也会覆盖继承 */
+  text-decoration: none;
+}
+
+.main-nav__item a {
+  text-decoration: none;
+  color: #0e4f1f;
+  font-weight: bold;
+  padding: 3px 0;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+  color: #fff;
+  border-bottom: 5px solid #fff;
+}
+
+.main-nav__item--cta a {
+  color: #fff;
+  background: #ff1b68;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+  color: #ff1b68;
+  background: #fff;
+  border: none;
+}
+
+/* 
+.main-nav__item a::after {
+  只能在after和before上设置
+  接收一个字符串，将被添加到DOM的内容
+  content: ' (Link)';
+  color: #ff0000;
+  }
+*/
+
+/* 
+  Margin Collapsing
+  有两个元素块，两个元素彼此相邻，那么它们之间的边距实际上是折叠到一个边距
+  较大的边距获胜
+  这是由CSS强制执行，以确保元素之间不会有两个很大的距离
+
+  如果想相对于页面的高度来设置元素的高度，需要创建一个链，向下传递页面高度
+
+  对于内联元素，我们不能真正设置上下边距（左右可以正常工作），
+  因为它不像块级元素那样定位在流中
+
+  区分伪类和伪元素
+  伪类：定义了一个样式，允许我们为元素的特殊状态定义一个样式。添加一个冒号
+  伪元素：允许我们定义元素的特定部分的样式。添加两个冒号
+ */
