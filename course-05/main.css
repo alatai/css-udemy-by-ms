@@ -1,0 +1,119 @@
+#product-overview {
+  background: url('freedom.jpg');
+  width: 100%;
+  height: 528px;
+  padding: 10px;
+}
+
+.section-title {
+  color: #2ddf5c;
+  text-align: center;
+}
+
+#product-overview h1 {
+  color: white;
+  font-family: 'Anton', sans-serif;
+}
+
+.plan__list {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.plan {
+  display: inline-block;
+  margin: 8px;
+  padding: 16px;
+  width: 30%;
+  vertical-align: middle;
+  text-align: center;
+  background: #d5ffdc;
+}
+
+.plan--highlighted {
+  color: #fff;
+  background: #19b84c;
+  /* box-shadow为块级元素添加阴影效果的属性 */
+  /* 可以通过配置参数设置阴影的颜色、偏移、模糊程度、扩展范围，以及是否内阴影等 */
+  /* rgba可以添加第四个参数，它定义了透明度 */
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan__annotation {
+  padding: 8px;
+  color: #19b84c;
+  background: #fff;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.plan__title {
+  color: #0e4f1f;
+}
+
+.plan__price {
+  color: #858585;
+}
+
+.plan--highlighted .plan__title {
+  color: #fff;
+}
+
+.plan--highlighted .plan__price {
+  color: #0e4f1f;
+}
+
+.plan__features {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plan__feature {
+  margin: 8px 0;
+}
+
+#key-features {
+  margin-top: 80px;
+  padding: 16px;
+  background: #ff1b68;
+}
+
+#key-features .section-title {
+  margin: 32px;
+  color: #fff;
+}
+
+.key-feature__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* 对于内联元素（子元素），可以用文本对齐定位 */
+  text-align: center;
+}
+
+.key-feature {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+}
+
+.key-feature__image {
+  width: 128px;
+  height: 128px;
+  /* 水平居中，因为它只对左右有影响 */
+  /* auto会自动填充左右的可用空间，使元素水平居中 */
+  margin: 0 auto;
+  background: #ffcede;
+  border: 2px solid #424242;
+  /* 得到一个完美的原形，必须设置为50% */
+  border-radius: 50%;
+}
+
+.key-feature__description {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
