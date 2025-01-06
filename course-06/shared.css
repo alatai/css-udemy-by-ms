@@ -2,15 +2,27 @@
   box-sizing: border-box;
 }
 
+/*
+html { 
+  margin: 30px;
+}
+ */
+
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
 }
 
 .main-header {
+  /* 添加位置固定属性 */
+  position: fixed;
+  /* 一旦向html或body添加外边距后，就需要添加top:0和left:0声明 */
+  top: 0;
+  left: 0;
   width: 100%;
   background: #2ddf5c;
   padding: 8px 16px;
+  z-index: 1;
 }
 
 .main-header > div {
