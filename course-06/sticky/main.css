@@ -1,0 +1,43 @@
+html {
+  background: #b3b3b3;
+  padding: 15px;
+  border: 5px solid white;
+  margin: 15px;
+  height: 2000px;
+}
+
+body {
+  background: #e4deda;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 0;
+}
+
+.parent {
+  background: white;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 10px;
+}
+
+.parent .country {
+  background: #fa923f;
+  color: white;
+  padding: 10px;
+  border: 5px solid black;
+  margin: 10px;
+  /* sticky基本上是相对和固定的混合 */
+  position: sticky;
+  /* 添加top之后，元素的行为就像一个固定元素 */
+  /* 可以指定元素和视窗之间的距离，一旦达到这个距离元素的行为就像固定一样 */
+  /* 当元素到达父元素内容的末尾时，它就不在被固定 */
+  top: 20px;
+}
+
+.parent .cities {
+  background: rgb(105, 105, 109);
+  color: white;
+  padding: 10px;
+  border: 5px solid black;
+  margin: 10px;
+}
